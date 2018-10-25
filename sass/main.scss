@@ -3,6 +3,10 @@
   font-family: CodePro; /* Имя шрифта */
   src: url(../fonts/Code-Pro-Bold.ttf); /* Путь к файлу со шрифтом */
 }
+@font-face {
+  font-family: CodeProL; /* Имя шрифта */
+  src: url(../fonts/Code-Pro.ttf); /* Путь к файлу со шрифтом */
+}
 $red: #9c053c;
 $black: #1d1d1b;
 *{}
@@ -517,6 +521,99 @@ header .top_menu li:hover{
 .block4 .row img:first-child{
   margin-right: 1px;
 }
+
+.block5 {
+  background: $black;
+}
+.block5 h2{
+ color: #fff;
+  text-align: left;
+  width: 1200px;
+  font-family: CodePro,sans-serif;
+  font-size: 40px;
+  font-weight: 900;
+  position: relative;
+  padding-left: 50px;
+  letter-spacing: 1.2px;
+  margin-top: 50px;
+  margin-bottom: 60px;
+}
+.block5 h2:before{
+  content: "";
+  width: 70px;
+  height: 4px;
+  position: absolute;
+  display: block;
+  background: $red;
+  top: 50%;
+  left: -40px;
+}
+.w{
+  flex: 100%;
+}
+.block5 .row{
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  width: 1200px;
+  margin: auto;
+}
+.block5 .row ul li{
+  color: $red;
+  list-style-type: square;
+}
+.block5 .row ul li span{
+  color: #fff;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 400;
+  letter-spacing: 1.2px;
+}
+.block5 .block5_item > span{
+  color: $red;
+  font-family: CodeProL,sans-serif;
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 100;
+  position: relative;
+  padding-left: 60px;
+  width: 229px;
+  display: block;
+  margin: auto;
+  margin-bottom: 40px;
+}
+.block5 .block5_item > span:before{
+  content: "";
+
+  position: absolute;
+  display: inline-block;
+  left: -20px;
+}
+.block5 .block5_item .one:before{
+  background: url("../img/funds.png")0 0 no-repeat;
+  width: 67px;
+  height: 60px;
+}
+
+.block5 .block5_item .two:before{
+  content: "";
+  background: url("../img/manager.png")0 0 no-repeat;
+  width: 72px;
+  height: 73px;
+  position: absolute;
+  display: inline-block;
+  top: -10px;
+  left: -20px;
+}
+.block5 .block5_item .three:before{
+  content: "";
+  background: url("../img/cogwheel.png")0 0 no-repeat;
+  width: 77px;
+  height: 77px;
+  position: absolute;
+  display: inline-block;
+  top: -12px;
+  left: -28px;
+}
 /*==========  Desktop First Method  ==========*/
 
 /* Large Devices, Wide Screens */
@@ -538,6 +635,9 @@ header .top_menu li:hover{
   }
   .block3 .blcok3_item h2:before{
     display: none;
+  }
+  .block5 .block5_item{
+    width: 31%;
   }
 }
 
@@ -565,6 +665,21 @@ header .top_menu li:hover{
   }
   .block3 .blcok3_item.right h2:after{
     left: -31px;
+  }
+  .block5 .row{
+    width: 100%;
+    padding: 0 30px;
+  }
+  .block5 h2{
+    line-height: 1;
+  }
+  .block5 h2:before {
+    content: "";
+    width: 46px;
+    left: -5px;
+  }
+  .block5 h2{
+    width: 100%;
   }
 }
 
@@ -799,6 +914,25 @@ header .top_menu li:hover{
     display: none;
   }
 
+  .block5 .row{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .block5 .block5_item{
+    width: auto;
+    margin-bottom: 50px;
+  }
+  .block5 h2{
+    text-align: center;
+  }
+  .block5 h2:before {
+    content: "";
+    width: 120px;
+    top: 122%;
+    left: 50%;
+    transform: translate(-40%);
+  }
 }
 
 /* Extra Small Devices, Phones */
@@ -858,6 +992,10 @@ header .top_menu li:hover{
   }
   .block4 .row {
     height: 247px;
+  }
+  .block5 h2{
+    font-size: 20px;
+    padding-left: 0;
   }
 }
 
