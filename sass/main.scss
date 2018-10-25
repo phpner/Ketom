@@ -456,6 +456,8 @@ header .top_menu li:hover{
   width: 600px;
   height: 400px;
   transform: translateY(36%);
+  position: relative;
+  right: -67px;
 }
 .block3 .blcok3_item.left.bg{
   position: relative;
@@ -469,7 +471,11 @@ header .top_menu li:hover{
   background: #efefef;
   z-index: -1;
   top: 0px;
-  left: -655px;
+  left: -521px;
+}
+
+.block3 .blcok3_item.right.text{
+  padding-left: 74px;
 }
 
 .block3 .blcok3_item.right  h2:after{
@@ -500,6 +506,16 @@ header .top_menu li:hover{
   text-align: left;
   display: block;
   font-weight: 700;
+}
+.block4 .row{
+  display: flex;
+  height: 500px;
+}
+.block4 .row img{
+  width: 50%;
+}
+.block4 .row img:first-child{
+  margin-right: 1px;
 }
 /*==========  Desktop First Method  ==========*/
 
@@ -737,6 +753,12 @@ header .top_menu li:hover{
     margin-top: -36px;
 
   }
+  .block3 .blcok3_item.right.text {
+    padding-left: 0;
+  }
+  .block4 .row{
+    height: 336px;
+  }
 }
 
 /* Small Devices, Tablets */
@@ -769,6 +791,12 @@ header .top_menu li:hover{
     text-align: center;
     margin: 16px 0 21px;
     font-size: 20px;
+  }
+  .block4 .row img{
+    width: 100%;
+  }
+  .block4 .row img:last-child{
+    display: none;
   }
 
 }
@@ -827,6 +855,9 @@ header .top_menu li:hover{
   }
   .block3 .blcok3_item h2{
     font-size: 25px;
+  }
+  .block4 .row {
+    height: 247px;
   }
 }
 
