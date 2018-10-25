@@ -825,6 +825,80 @@ header .top_menu li:hover{
   position: absolute;
   bottom: 30px;
 }
+
+footer .row{
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-flow: row wrap;
+}
+footer .row .footer_item{
+  width: 50%;
+}
+
+footer .row h2{
+  color: $red;
+  text-align: left;
+  font-family: CodePro,sans-serif;
+  font-size: 40px;
+  font-weight: 900;
+  position: relative;
+  padding-left: 50px;
+  letter-spacing: 1.2px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  width: 100%;
+}
+footer .row h2:before{
+  content: "";
+  width: 70px;
+  height: 4px;
+  position: absolute;
+  display: block;
+  background: $black;
+  top: 50%;
+  left: -40px;
+}
+footer .row .footer_item .block span{
+  color: $red;
+  text-align: left;
+  font-family: CodeProL,sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+}
+footer .row .footer_item .block p{
+  font-family: "Fira Sans",sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+footer .row .footer_item.right h4{
+  padding-top: 170px;
+  font-family: CodeProL,sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+}
+
+footer .row .footer_item.right .tel{
+  color: $red;
+  padding-top: 170px;
+  font-family: CodePro,sans-serif;
+  font-size: 53px;
+  font-weight: 900;
+}
+
+footer .row h2:after {
+  content: "звони сейчас!";
+  position: absolute;
+  top: -30px;
+  left: 76px;
+  font-size: 50px;
+  color: #000;
+  z-index: -1;
+  opacity: .1;
+  font-family: "Fira Code Light",sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+}
 /*==========  Desktop First Method  ==========*/
 @media only screen and (max-width : 1600px) {
   .block8 .row .block8_item.right .block {
@@ -921,6 +995,16 @@ header .top_menu li:hover{
   }
   .block8 .row{
     height: 600px;
+  }
+  footer .row{
+    padding: 0 40px;
+  }
+  footer .row h2:before{
+    width: 36px;
+    left: -6px;
+  }
+  footer .row h2:after{
+    font-size: 41px;
   }
 }
 
@@ -1160,6 +1244,21 @@ header .top_menu li:hover{
   .block8 .row .block8_item.right .block p{
     display: inline-block;
   }
+  footer .row{
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .row .footer_item{
+    width: auto;
+    text-align: center;
+  }
+  footer .row h2{
+    margin-bottom: 12px;
+    width: 450px;
+  }
+  footer .row .footer_item.right h4{
+    padding-top: 20px;
+  }
 }
 
 /* Small Devices, Tablets */
@@ -1276,6 +1375,21 @@ header .top_menu li:hover{
     left: 50%;
     transform: translate(-50%);
   }
+  footer .row h2{
+    margin-top: 20px;
+    padding-left: 0;
+    text-align: center;
+  }
+  footer .row h2:before {
+    width: 78px;
+    background: #9c053c;
+    top: 108%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  footer .row h2:after{
+    display: none;
+  }
 }
 
 /* Extra Small Devices, Phones */
@@ -1365,6 +1479,16 @@ header .top_menu li:hover{
   }
   .block8 .row ul {
     margin-left: 0;
+  }
+  footer .row h2{
+    font-size: 25px;
+    width: auto;
+  }
+  footer .row .footer_item.right h4{
+    font-size: 20px;
+  }
+  footer .row .footer_item.right .tel{
+    font-size: 31px;
   }
 }
 
