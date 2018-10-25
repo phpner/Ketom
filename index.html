@@ -10,6 +10,23 @@
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+<form data-effect="mfp-zoom-in" method="post" action="/message.php" class="white-popup mfp-with-anim mfp-hide form" id="form">
+     <h2>заказать звонок</h2>
+
+    <input id="name" type="text" name="name" placeholder="ИМЯ">
+
+    <input id="tel" type="text" name="tel" placeholder="телефон">
+
+    <input id="email" type="text" name="tel" placeholder="почта">
+
+    <div class="form_grop">
+        <input name="checkbox" type="checkbox" id="checkbox">
+        <label for="checkbox"></label>
+        <span onclick="$('#checkbox').trigger('click');">Я согласен на передачу и обработку  персональных <br>
+            данных, а также на получение  информации обо мне</span>
+        <input type="submit" class="btn" value="заказать звонок">
+    </div>
+</form>
 <header>
 	<div class="top_header">
 			<img src="img/logo.png" class="logo" alt="">
@@ -50,7 +67,7 @@
 				<span class="text1">площадей Продано! </span> <br>
 				<span class="text2 hide-in-480">ЗВОНИ (4212) 60-30-80</span>
 			</div>
-			<span class="tel"><a href="#form">Заказать звонок</a></span>
+			<span class="tel"><a class="popup-with-form"  data-effect="mfp-zoom-in"  href="#form" >Заказать звонок</a></span>
 			<span class="text2 show-480px">ЗВОНИ (4212) 60-30-80</span>
 		</div>
 	</div>
@@ -422,10 +439,10 @@
 
     </div>
 </footer>
-<div class="fack"></div>
 
 	<script src="js/jquery-1.12.4.min.js"></script>
 	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
 	<script src="js/main.js"></script>
 </body>
 </html>

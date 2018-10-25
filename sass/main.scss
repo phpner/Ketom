@@ -7,6 +7,7 @@
   font-family: CodeProL; /* Имя шрифта */
   src: url(../fonts/Code-Pro.ttf); /* Путь к файлу со шрифтом */
 }
+@import "magnific-popup";
 $red: #9c053c;
 $black: #1d1d1b;
 *{}
@@ -15,6 +16,97 @@ body{
   overflow-x: hidden;
   max-width: 1920px;
   margin: auto;
+}
+.form{
+  display: flex;
+  flex-flow: column;
+  width: 776px;
+  justify-content: center;
+  background: #fff;
+  padding: 20px 32px;
+  border: 1px dotted #5a5a5a;
+  margin: auto;
+  position: relative;
+}
+.form h2{
+  font-family: CodePro, monospace;
+  font-weight: bold;
+  font-size: 40px;
+  text-transform: uppercase;
+  color: #9c053c;
+  position: relative;
+  line-height: 1;
+  text-align: center;
+  margin: 14px 0;
+}
+.form input:not([type="submit"]){
+  border: none;
+  border-bottom: 1px solid;
+  height: 41px;
+  margin-bottom: 8px;
+  outline: none;
+}
+.form input::placeholder{
+  color: $black;
+  font-family: CodeProL,sans-serif;
+  flex: 25;
+  font-weight: 700;
+}
+.form .form_grop input[type='checkbox']{
+  display: none;
+
+}
+.form .form_grop input[type='checkbox'] + label{
+   display: inline-block;
+   width: 25px;
+   height: 25px;
+   background: transparent;
+   border: 1px solid;
+    position: relative;
+   transition: all 4s ease-in-out;
+    vertical-align: top;
+    top: 7px;
+  cursor: pointer;
+ }
+
+.form .form_grop input[type='checkbox']:checked + label:after{
+  content: '';
+  position: absolute;
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background: $red;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.form .form_grop span{
+  display: inline-block;
+  cursor: pointer;
+  user-select: none;
+}
+
+.form .form_grop .btn{
+  display: inline-block;
+    background-color: $red;
+    width: 267px;
+    height: 56px;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    margin-left: 20px;
+    font-family: CodeProL, sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 1.4;
+    text-align: center;
+    cursor: pointer;
+  }
+.form .form_grop .btn:hover{
+  background-color: #900539;
+}
+.form .form_grop {
+  margin-top: 32px;
 }
 .wrapper{
   max-width: 1210px;
@@ -826,6 +918,9 @@ header .top_menu li:hover{
   bottom: 30px;
 }
 
+footer {
+  padding-bottom: 80px;
+}
 footer .row{
   max-width: 1200px;
   margin: auto;
@@ -872,7 +967,7 @@ footer .row .footer_item .block p{
   font-weight: 400;
 }
 footer .row .footer_item.right h4{
-  padding-top: 170px;
+  padding-top: 0px;
   font-family: CodeProL,sans-serif;
   font-size: 40px;
   font-weight: 500;
@@ -898,6 +993,9 @@ footer .row h2:after {
   font-family: "Fira Code Light",sans-serif;
   font-weight: 500;
   text-transform: uppercase;
+}
+.mfp-container{
+  position: fixed;
 }
 /*==========  Desktop First Method  ==========*/
 @media only screen and (max-width : 1600px) {
@@ -1390,6 +1488,16 @@ footer .row h2:after {
   footer .row h2:after{
     display: none;
   }
+  .form{
+    width: 462px;
+  }
+  .form .form_grop .btn{
+    display: block;
+    margin: auto;
+  }
+  .form .form_grop label{
+    width: 89%;
+  }
 }
 
 /* Extra Small Devices, Phones */
@@ -1489,6 +1597,13 @@ footer .row h2:after {
   }
   footer .row .footer_item.right .tel{
     font-size: 31px;
+  }
+  .form {
+    width: 300px;
+    padding: 10px 6px;
+  }
+  .form h2{
+    font-size: 25px;
   }
 }
 
