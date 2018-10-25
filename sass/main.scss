@@ -744,8 +744,93 @@ header .top_menu li:hover{
   font-size: 25px;
   padding-left: 30px;
 }
-/*==========  Desktop First Method  ==========*/
+.block8 .row{
+  display: flex;
+  position: relative;
+}
+.block8 .row .block8_item{
+  width: 50%;
+}
+.block8 .row .block8_item img{
+  width: 100%;
+}
+.block8 .row .block8_item.right{
+  padding-left: 80px;
+  background: $black;
+}
+.block8 .row .block8_item.right h2{
+  color: #fff;
+  text-align: left;
+  font-family: CodePro,sans-serif;
+  font-size: 40px;
+  font-weight: 900;
+  position: relative;
+  padding-left: 50px;
+  letter-spacing: 1.2px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+.block8 .row .block8_item.right h2:before{
+  content: "";
+  width: 70px;
+  height: 4px;
+  position: absolute;
+  display: block;
+  background: $red;
+  top: 50%;
+  left: -40px;
+}
+.block8 .row .block8_item.right h4{
+  color: #fff;
+  text-align: left;
+  font-family: "Fira Sans",sans-serif;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+}
+.block8 .row ul{
+  margin-left: -24px;
+}
+.block8 .row ul li {
+  color: #9c053c;
+  list-style-type: square;
+}
+.block8 .row ul li span {
+  color: #fff;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 200;
+  letter-spacing: 1.2px;
+}
+.block8 .row .block8_item.right .block{
+  display: inline-block;
+  margin-top: 90px;
 
+}
+.block8 .row .block8_item.right .block.two{
+  margin-left: 50px;
+}
+.block8 .row .block8_item.right .block span{
+  color: $red;
+  font-size: 25px;
+  font-family: "Fira Sans",sans-serif;
+  font-weight: 500;
+}
+.block8 .row .block8_item.right .block p{
+  color: #fff;
+  margin-bottom: 2px;
+}
+.block8 .row .block8_item.right .us_part{
+  color: #fff;
+  font-family: "Fira Sans",sans-serif;
+  font-size: 16px;
+  position: absolute;
+  bottom: 30px;
+}
+/*==========  Desktop First Method  ==========*/
+@media only screen and (max-width : 1600px) {
+  .block8 .row .block8_item.right .block {
+    margin-top: 14px;
+  }
+}
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1400px) {
   header .top_header .logo{
@@ -779,6 +864,14 @@ header .top_menu li:hover{
   .block7 h2:before{
     width: 38px;
     left: 6px;
+  }
+
+  .block8 .row .block8_item img {
+    width: 140%;
+    height: 100%;
+    position: relative;
+    left: -111px;
+    z-index: -1;
   }
 }
 
@@ -826,10 +919,16 @@ header .top_menu li:hover{
     width: 100%;
     padding: 0 40px;
   }
+  .block8 .row{
+    height: 600px;
+  }
 }
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
+  .del_br{
+    content: '';
+  }
   body{
     padding-top: 70px;
   }
@@ -1027,6 +1126,40 @@ header .top_menu li:hover{
   .block7 .row .block7_item.left{
     order: 2;
   }
+  .block8 .row{
+    flex-direction: column;
+    align-items: center;
+  }
+  .block8 .row{
+    height: auto;
+  }
+  .block8 .row .block8_item img {
+    width: 100%;
+    height: 100%;
+    left: initial;
+  }
+  .block8 .row .block8_item.right .us_part{
+    position: static;
+    margin-top: 30px;
+  }
+  .block8 .row .block8_item.right{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+    box-shadow: 0px -3px 20px rgba(253, 253, 253, 0.5);
+  }
+  .block8 .row .block8_item.right .block{
+    text-align: center;
+  }
+  .block8 .row .block8_item.right .block.two{
+    margin-left: 0;
+  }
+  .block8 .row .block8_item.right .block p{
+    display: inline-block;
+  }
 }
 
 /* Small Devices, Tablets */
@@ -1130,6 +1263,19 @@ header .top_menu li:hover{
     top: 110%;
     transform: translate(-50%);
   }
+  .block8 .row .block8_item{
+    width: 100%;
+  }
+  .block8 .row .block8_item.right h2{
+    padding-left: 0;
+  }
+  .block8 .row .block8_item.right h2:before {
+    width: 78px;
+    background: #9c053c;
+    top: 108%;
+    left: 50%;
+    transform: translate(-50%);
+  }
 }
 
 /* Extra Small Devices, Phones */
@@ -1213,6 +1359,12 @@ header .top_menu li:hover{
   }
   .block7 .row .block7_item.left{
     padding-left: 0;
+  }
+  .block8 .row .block8_item.right .us_part{
+    text-align: center;
+  }
+  .block8 .row ul {
+    margin-left: 0;
   }
 }
 
