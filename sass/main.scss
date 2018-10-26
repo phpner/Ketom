@@ -106,6 +106,21 @@ body{
 .form .form_grop .btn:hover{
   background-color: #900539;
 }
+label.error{
+  background: rgba(156, 5, 60, 0.32);
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+}
+input.error{
+  border-color: #9c053c!important;
+  border-width: 2px!important
+}
+input.valid{
+  border-color: #79c787 !important;
+  border-width: 2px !important;
+  box-shadow: 0px 2px 2px rgba(78, 171, 50, 0.21);
+}
 .form .form_grop {
   margin-top: 32px;
 }
@@ -574,7 +589,8 @@ header .top_menu li:hover{
 }
 
 .block3 .blcok3_item.right.text{
-  padding-left: 74px;
+  padding-left: 120px;
+
 }
 
 .block3 .blcok3_item.right  h2:after{

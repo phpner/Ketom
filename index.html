@@ -21,10 +21,10 @@
 
     <input id="tel" type="text" name="tel" placeholder="телефон">
 
-    <input id="email" type="text" name="tel" placeholder="почта">
+    <input id="email" type="text" name="email" placeholder="почта">
 
     <div class="form_grop">
-        <input name="checkbox" type="checkbox" id="checkbox">
+        <input name="checkboxb" type="checkbox" id="checkbox" >
         <label for="checkbox"></label>
         <span onclick="$('#checkbox').trigger('click');">Я согласен на передачу и обработку  персональных <br>
             данных, а также на получение  информации обо мне</span>
@@ -51,13 +51,13 @@
 		<div class="clearfix"></div>
 
 		<ul class="top_menu">
-			<li><a href="#">О бизнес-районе</a></li>
-			<li><a href="#">Бизнесменам</a></li>
-			<li><a href="#">Инвесторам</a></li>
-			<li><a href="#">Застройщик</a></li>
-			<li><a href="#">Гарантии</a></li>
-			<li><a href="#">Ипотека</a></li>
-			<li><a href="#">Контакты</a></li>
+			<li><a href="#block3">О бизнес-районе</a></li>
+			<li><a href="#block2">Бизнесменам</a></li>
+			<li><a href="#block5">Инвесторам</a></li>
+			<li><a href="#block6">Застройщик</a></li>
+			<li><a href="#block7">Гарантии</a></li>
+			<li><a href="#block8">Ипотека</a></li>
+			<li><a href="#cont">Контакты</a></li>
 		</ul>
 	</div>
 	<div class="header_center">
@@ -100,7 +100,7 @@
 
 	</div>
 </div>
-<div class="block2">
+<div class="block2" id="block2">
 	<div class="row">
 		<div class="block2_item1 bg">
 			<div class="cover">
@@ -135,7 +135,7 @@
 	</div>
 </div>
 
-<div class="block3">
+<div class="block3" id="block3">
 	<div class="row">
 		<div class="blcok3_item left">
 			<h2>о бизнес-районе</h2>
@@ -224,7 +224,7 @@
 		<img src="img/foto9.png" alt="">
 	</div>
 </div>
-<div class="block5">
+<div class="block5" id="block5">
 
 	<div class="row">
         <h2>Инвесторам особенно выгодно!</h2>
@@ -293,7 +293,7 @@
 		</div>
 	</div>
 </div>
-<div class="block6">
+<div class="block6" id="block6">
     <div class="row">
         <h2>застройщик</h2>
         <div class="w"></div>
@@ -331,7 +331,7 @@
         </div>
     </div>
 </div>
-<div class="block7">
+<div class="block7" id="block7">
     <div class="row">
         <div class="block7_item left">
         <h2>гарантии важны</h2>
@@ -373,7 +373,7 @@
         </div>
     </div>
 </div>
-<div class="block8">
+<div class="block8" id="block8">
     <div class="row">
         <div class="block8_item">
             <img src="img/foto11.png" alt="">
@@ -407,7 +407,7 @@
         </div>
     </div>
 </div>
-<footer>
+<footer id="cont">
     <div class="row">
         <h2>контакты</h2>
         <div class="w"></div>
@@ -447,6 +447,7 @@
 	<script src="js/jquery-1.12.4.min.js"></script>
 	<script src="js/owl.carousel.min.js"></script>
 	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/jquery.validate.js"></script>
 	<script src="js/main.js"></script>
 </body>
 </html>

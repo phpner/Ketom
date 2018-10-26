@@ -54,4 +54,35 @@ $(document).ready(function ($) {
         $("#checkbox").trigger('chec')
     }
 
+    $(".top_menu li").on("click","a", function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 1500);
+    });
+
+    $(".form").validate({
+        success: "valid",
+        rules: {
+            name: {
+                minlength: 3,
+                required: true,
+            },
+            tel: {
+                required: true,
+                minlength: 5,
+            },
+            email: {
+                required: true,
+                minlength: 5,
+                email: true
+            },
+        },
+        messages: {
+            name: "Ваше имя",
+            tel: "Ваш телефон",
+            email: "Введите Вашу почту"
+        }
+    });
+
 });
