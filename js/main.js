@@ -9,6 +9,9 @@ $(document).ready(function ($) {
                 items:1,
             },
             992:{
+                items:2,
+            },
+            1350:{
                 items:3,
             }
         }
@@ -59,6 +62,7 @@ $(document).ready(function ($) {
         var id  = $(this).attr('href'),
             top = $(id).offset().top;
         $('body,html').animate({scrollTop: top}, 1500);
+        $(".top_menu").removeClass('opener')
     });
 
     $(".form").validate({
@@ -84,5 +88,17 @@ $(document).ready(function ($) {
             email: "Введите Вашу почту"
         }
     });
+
+    var nav = $('.top_header');
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 95) {
+            nav.addClass("f-nav");
+        } else {
+            nav.removeClass("f-nav");
+        }
+    });
+
+
 
 });

@@ -39,31 +39,42 @@ if($_POST['tel']){
     $phone = "";
 }
 
-if($_POST['email']){
-    $text = trim(strip_tags($_POST['email']));
+if($_POST['text']){
+    $text = trim(strip_tags($_POST['text']));
 }else{
     $text = "";
 }
 
 
-$body = "Имя: $name <br> Телефон: $phone  <br>Email: $text <br>Дата: $data" ;
+$body = "Имя: $name <br> Телефон: $phone <br>Дата: $data <br>Сообщение: $text" ;
 require_once($_SERVER['DOCUMENT_ROOT'] . '/phpmailer/PHPMailerAutoload.php'); //подключаем класс
 $mail = new PHPMailer(); //вызываем класс
-$mail->CharSet = 'utf-8';   //Устанавливаем кодировку
-$mail->SetLanguage('ru');   //для ошибок итд.
-$mail->addAddress("phpner@gmail.com","phpner@gmail.com"); //куда отправлять список через ","
-$mail->From = '***';
-$mail->FromName = 'Ketom';
-$mail->Subject = "ПРОСТРАНСТВО ДЛЯ ЛЮДЕЙ ДЕЛА!";
+
+$mail->IsSMTP(); 
+$mail->Host = 'smtp.mail.ru'; 
+$mail->SMTPAuth = true; 
+$mail->Port = 465;
+$mail->SMTPSecure = 'ssl';
+$mail->CharSet = 'utf-8'; //Устанавливаем кодировку
+$mail->Username = 'imarkeventus@mail.ru'; 
+$mail->Password = 'um857thj';
+
+$mail->SetLanguage('ru'); //для ошибок итд.
+$mail->addAddress("imarkeventus@mail.ru","email1"); //куда отправлять список через ","
+$mail->addAddress("zas@elpismed.ru","email2"); //куда отправлять список через ","
+$mail->addAddress("2291464@gmail.com","email3"); //куда отправлять список через ","
+$mail->From = 'imarkeventus@mail.ru';
+$mail->FromName = 'Элпис';
+$mail->Subject = "ПРЕДРЕЙСОВЫЕ МЕДИЦИНСКИЕ ОСМОТРЫ В ВОРОНЕЖЕ И ОБЛАСТИ";
 $mail->Body = $body;
 $mail->IsHTML(true);
 //отправка 
 if(!$mail->Send()) {
-    echo "Mailer Error: " . $mail->ErrorInfo; //Выводит ошибку с учетом языка
+echo "Mailer Error: " . $mail->ErrorInfo; //Выводит ошибку с учетом языка
 } else {
-    echo "<b class='thanks'>Мы Вам скоро перезвоним!</b>";
+echo "<b class='thanks'>Мы Вам скоро перезвоним!</b>";
 }
-/*header( 'Refresh: 0; url=http://kuban-hostel.ru/' );*/
+/*header( 'Refresh: 0;' );*/
 /*exit;*/
 ?>
 <script>
